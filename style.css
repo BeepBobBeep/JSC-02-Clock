@@ -1,0 +1,12 @@
+html{
+    background-image: url("images/bg-2.jpg");
+    /* background-size: 100vw 200vh; */ 
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+}
