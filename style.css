@@ -47,7 +47,7 @@ html{
 
     /* cubic-beizer values are selected from chrome dev options (ctrl+shift+I) */
     transition: all 0.5s;
-    transition-timing-function: cubic-bezier(0, 2.52, 0.61, 1.06);
+    transition-timing-function: cubic-bezier(0.05, 1.71, 0.58, 1);
 }
 
 .second-hand{
@@ -72,4 +72,8 @@ html{
     border-radius: 4px;
     height: 0.4vw; /*Thickness of hour hand*/
     width: 40%; /*Length of hour hand ~ half the width of div*/
+}
+
+.no-effect{
+    transition: none;
 }
