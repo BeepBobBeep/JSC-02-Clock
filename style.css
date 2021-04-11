@@ -24,28 +24,30 @@ html{
     left: 50%;
     transform: translate(-50%,-50%);
     
-    /* box-shadow: x-offset y-offset blur radius color; */
+    box-shadow: x-offset y-offset blur radius color;
     box-shadow: 7px 7px 20px 2px rgb(229, 243, 195);
-
-
 }
 
-.minute-hand{
-    background-color: black;
-    border: 1px solid;
+.second-hand{
+    background-color: rgb(247, 157, 38);
+    border: 1px solid rgb(247, 157, 38);
     border-radius: 4px;
-    height: 0.4vw;
+    height: 0.1vw; /*Thickness of second hand*/
     width: 48%; /*half the width of div*/
 
-    /* Shifting it downwards halfway and rightwards halfway wrt parent */
+    /* Shifting it downwards halfway and rightwards halfway wrt parent 
+    ,translating it -50% downwards and
+    rotating it 270deg to make initial angle at 12'o clock
+    */
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(0,-50%) rotate(270deg);
 
     /* Making x offset of minute hand to left (default is 50%)*/
     transform-origin: 0%;
-    transform: rotate(270deg);
 
+    /* cubic-beizer values are selected from chrome dev options (ctrl+shift+I) */
     transition: all 0.5s;
-    transition-timing-function: cubic-bezier(0.01, 1.49, 0.61, 1.06);
+    transition-timing-function: cubic-bezier(0, 2.52, 0.61, 1.06);
 }
