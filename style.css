@@ -28,13 +28,11 @@ html{
     box-shadow: 7px 7px 20px 2px rgb(229, 243, 195);
 }
 
-.second-hand{
-    background-color: rgb(247, 157, 38);
-    border: 1px solid rgb(247, 157, 38);
-    border-radius: 4px;
-    height: 0.1vw; /*Thickness of second hand*/
-    width: 44%; /*half the width of div*/
-
+.hands{
+    /* This class contains code regarding 
+    1. Positioning of all hands
+    2. Animation effect of hands moving
+    */
     /* Shifting it downwards halfway and rightwards halfway wrt parent 
     ,translating it -50% downwards and
     rotating it 270deg to make initial angle at 12'o clock
@@ -52,28 +50,20 @@ html{
     transition-timing-function: cubic-bezier(0, 2.52, 0.61, 1.06);
 }
 
+.second-hand{
+    background-color: rgb(247, 157, 38);
+    border: 1px solid rgb(247, 157, 38);
+    border-radius: 4px;
+    height: 0.1vw; /*Thickness of second hand*/
+    width: 44%; /*Length of second hand ~ half the width of div*/
+}
+
 .minute-hand{
     background-color: rgb(0, 0, 0);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 4px;
     height: 0.19vw; /*Thickness of minute hand*/
-    width: 48%; /*half the width of div*/
-
-    /* Shifting it downwards halfway and rightwards halfway wrt parent 
-    ,translating it -50% downwards and
-    rotating it 270deg to make initial angle at 12'o clock
-    */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(0,-50%) rotate(180deg);
-
-    /* Making x offset of minute hand to left (default is 50%)*/
-    transform-origin: 0%;
-
-    /* cubic-beizer values are selected from chrome dev options (ctrl+shift+I) */
-    transition: all 0.5s;
-    transition-timing-function: cubic-bezier(0, 2.52, 0.61, 1.06);
+    width: 48%; /*Length of minute hand ~ half the width of div*/
 }
 
 .hour-hand{
@@ -81,21 +71,5 @@ html{
     border: 1px solid rgb(0, 0, 0);
     border-radius: 4px;
     height: 0.4vw; /*Thickness of hour hand*/
-    width: 40%; /*half the width of div*/
-
-    /* Shifting it downwards halfway and rightwards halfway wrt parent 
-    ,translating it -50% downwards and
-    rotating it 270deg to make initial angle at 12'o clock
-    */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(0,-50%) rotate(20deg);
-
-    /* Making x offset of minute hand to left (default is 50%)*/
-    transform-origin: 0%;
-
-    /* cubic-beizer values are selected from chrome dev options (ctrl+shift+I) */
-    transition: all 0.5s;
-    transition-timing-function: cubic-bezier(0, 2.52, 0.61, 1.06);
+    width: 40%; /*Length of hour hand ~ half the width of div*/
 }
