@@ -1,5 +1,6 @@
 function moveSecondHand (){
     var now = new Date();
+
     var sec = now.getSeconds();
     var secDegree = (sec * 6 - 90);
     // Dealing with the glitch effect when sec is changing from 59 to 0
@@ -12,8 +13,33 @@ function moveSecondHand (){
         }, 10);
     }
     document.querySelector(".second-hand").style.transform = `rotate(${secDegree}deg)`;
-    console.log(sec + " , " + secDegree);
+    
+    var min = now.getMinutes();
+    var minDegree = (min * 6 + sec/6 - 90);
+    // Dealing with the glitch effect when sec is changing from 59 to 0
+    if(min == 0){
+        // Removing the transition effect
+        document.querySelector(".minute-hand").classList.add("no-effect");
+        setTimeout(function(){
+            // Adding the transition effect
+            document.querySelector(".minute-hand").classList.remove("no-effect");    
+        }, 10);
+    }
+    document.querySelector(".minute-hand").style.transform = `rotate(${minDegree}deg)`;
+
+    var hr = now.getHours();
+    var hrDegree = (hr * 30 + min/2 - 90);
+    // Dealing with the glitch effect when sec is changing from 59 to 0
+    if(hr == 0 || hr == 12){
+        // Removing the transition effect
+        document.querySelector(".hour-hand").classList.add("no-effect");
+        setTimeout(function(){
+            // Adding the transition effect
+            document.querySelector(".hour-hand").classList.remove("no-effect");    
+        }, 10);
+    }
+    document.querySelector(".hour-hand").style.transform = `rotate(${hrDegree}deg)`;
 }
 
-// Move second hand every 1 second
+// Updating hands every 1 second
 setInterval(moveSecondHand,1000);
