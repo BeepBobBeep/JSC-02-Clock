@@ -98,3 +98,40 @@ html{
 .no-effect{
     transition: none;
 }
+
+._12{
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%,-100%);
+    font-size: 1.4vw;
+    font-weight: 1000;
+}
+._6{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translate(-50%,100%);
+    font-size: 1.4vw;
+    font-weight: 1000;
+}
+._3{
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    transform: translate(160%,-50%);
+    font-size: 1.4vw;
+    font-weight: 1000;
+}
+._9{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transform: translate(-160%,-50%);
+    font-size: 1.4vw;
+    font-weight: 1000;
+}
