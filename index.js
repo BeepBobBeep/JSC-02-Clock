@@ -43,4 +43,4 @@ function moveSecondHand (){
 }
 
 // Updating hands every 1 second
-// setInterval(moveSecondHand,1000);
+setInterval(moveSecondHand,1000);

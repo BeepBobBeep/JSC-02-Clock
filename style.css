@@ -28,6 +28,20 @@ html{
     box-shadow: 7px 7px 20px 2px rgb(229, 243, 195);
 }
 
+.centre-dot{
+    background-color: rgb(247, 157, 38);
+    border: 1px solid rgb(247, 157, 38);
+    border-radius: 100%;
+    height: 1vw;
+    width: 1vw;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+}
+
 .hands{
     /* This class contains code regarding 
     1. Positioning of all hands
