@@ -56,6 +56,13 @@ html{
     border-radius: 4px;
     height: 0.1vw; /*Thickness of second hand*/
     width: 44%; /*Length of second hand ~ half the width of div*/
+
+    /* 20% to make second hand centre of rotation at 20% and 80% ratio */
+    transform: translate(-20%,-50%) rotate(270deg);
+
+    /* // 20% to make second hand centre of rotation at 20% and 80% ratio (default is 50%)*/
+    transform-origin: 20%;
+
 }
 
 .minute-hand{
